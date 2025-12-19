@@ -12,7 +12,7 @@ export const getAllProjects = async (req: Request, res: Response) => {
 };
 
 //Get project by ID
-export const getProjetcbyId = async (req: Request, res: Response) =>{
+export const getProjectById = async (req: Request, res: Response) =>{
   try{
     const [rows]: any = await pool.execute (`SELECT * FROM projects WHERE id = ?`, [req.params.id]);
 if(rows.length === 0){
